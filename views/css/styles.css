@@ -7,6 +7,33 @@
  padding: 20px;
 }
 
+.articleDisplay {
+ padding: 50px;
+ min-width: 200px;
+ min-height: 500px;
+}
+
+#articleFrame {
+ position: relative;
+ width:100%;
+ border: 5px solid #93CBBD;
+ border-radius: 10px;
+}
+
+.ratingDisplay {
+ padding: 50px;
+ min-width: 200px;
+ min-height: 300px;
+ align-self: flex-end;
+}
+
+#ratingFrame {
+ position: relative;
+ width:100%;
+ border: 5px solid #93CBBD;
+ border-radius: 10px;
+}
+
 .rankedDisplay {
  padding: 50px;
  min-width: 200px;
