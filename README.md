@@ -12,3 +12,13 @@
 > Contains the file(s) pertaining to the server connection and the loading of pages. The packages used are Node JS and Express.
 
 <hr>
+
+<b> views </b>
+> pages
+>> Contains the files pertaining to the display of each page on the site. The structure and styling for each page uses Bootstrap, CSS and EJS. 
+
+> partials
+>> Contains the files pertaining to the content loaded repeatedly in each page file. Instead of cluttering every single page by loading each site-wide element every time, the element is instead called from this folder whenever needed. 
+
+> css
+>> Contains the file(s) pertaining to the styling of the page, specifically that which uses CSS. 
