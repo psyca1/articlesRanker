@@ -15,6 +15,13 @@ app.get(`/`, function(req,res){
  console.log(`Rendering Index Page`);
 });
 
+//Load the View Articles page
+app.get(`/viewArticles/`, function(req,res){
+ const data = {"loadedView":true};
+ res.render(`./pages/viewArticles`, data);
+ console.log(`Rendering View Page`);
+});
+
 //Load the Ranked Articles page
 app.get(`/rankedArticles/`, function(req,res){
  var data = {loadedRanked:true};
