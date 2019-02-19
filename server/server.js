@@ -24,7 +24,7 @@ app.get(`/viewArticles/`, function(req,res){
 
 //Load the Ranked Articles page
 app.get(`/rankedArticles/`, function(req,res){
- var data = {loadedRanked:true};
+ const data = {loadedRanked:true};
  res.render(`./pages/rankedArticles`, data);
  console.log(`Rendering Ranked Page`);
 });
