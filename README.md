@@ -11,8 +11,6 @@
 <b> server </b>
 > Contains the file(s) pertaining to the server connection and the loading of pages. The packages used are Node JS and Express.
 
-<hr>
-
 <b> views </b>
 > pages
 >> Contains the files pertaining to the display of each page on the site. The structure and styling for each page uses Bootstrap, CSS and EJS. 
@@ -22,3 +20,5 @@
 
 > css
 >> Contains the file(s) pertaining to the styling of the page, specifically that which uses CSS. 
+
+<hr>
