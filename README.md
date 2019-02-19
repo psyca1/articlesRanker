@@ -12,6 +12,8 @@
 > Contains the file(s) pertaining to the server connection and the loading of pages. The packages used are Node JS and Express.
 
 <b> views </b>
+> Contains the folders that describe the overall layout and styling of the site. 
+
 > pages
 >> Contains the files pertaining to the display of each page on the site. The structure and styling for each page uses Bootstrap, CSS and EJS. 
 
