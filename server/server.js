@@ -4,11 +4,30 @@ const express = require('express');
 //Create an instance called 'app'.
 const app = express();
 
-//Call the root URL '/' and display some text to visually confirm succesful webpage connection.
-app.get('/', (req,res)=> {
- res.send('Test');
+app.set(`view engine`, `ejs`);
+app.set(`views`, `views`);
+app.use(express.static("views"));
+
+//Load the Welcome page
+app.get(`/`, function(req,res){
+ //var data = {loadedIndex:true}
+ res.render(`pages/index`);
+ console.log(`Rendering Index Page`);
 });
 
+//Load the View Articles page
+app.get(`/viewArticles/`, function(req,res){
+ const data = {"loadedView":true};
+ res.render(`./pages/viewArticles`, data);
+ console.log(`Rendering View Page`);
+});
+
+//Load the Ranked Articles page
+app.get(`/rankedArticles/`, function(req,res){
+ const data = {loadedRanked:true};
+ res.render(`./pages/rankedArticles`, data);
+ console.log(`Rendering Ranked Page`);
+});
 
 
 //Display on the console what port the server is running on.
