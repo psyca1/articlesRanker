@@ -30,3 +30,6 @@ ratingSelector.addEventListener('blur', (e) => {
 
   ratings[article] = rating; 
 });
+
+function submitRating(){
+}
