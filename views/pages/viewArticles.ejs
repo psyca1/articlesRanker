@@ -3,7 +3,6 @@
  
  <head>
   <% include ../partials/head %>
-  <script src="/js/Rating.js"></script>
  </head>
   
   <body>
@@ -13,15 +12,35 @@
    
     <div class="container-fluid">
      <div class="row">
+      
       <div class="col-sm-8 articleDisplay">
-       <canvas id="articleFrame"></canvas>
+        <canvas id="articleFrame"></canvas>
       </div>
+      
       <div class="col-sm-4 ratingDisplay">
-       <canvas id="ratingFrame"></canvas>
+        <div class="container mt-5">
+         <div class="form-group">
+          <select id="articleSelect" class="form-control custom-select">
+            <option value="0" disabled selected>Select Article</option>
+            <option value="article1">Article 1</option>
+            <option value="article2">Article 2</option>
+            <option value="article3">Article 3</option>
+            <option value="article4">Article 4</option>
+            <option value="article5">Article 5</option>
+          </select>
+         </div>
+         
+         <div class="form-group">
+           <input type="number" id="ratingSelect" class="form-control" step="0.1" max="5" placeholder="Rate the Article from 1-5:" disabled>
+         </div>
+         
+         <button type="button" class="btn btn-light" onsubmit="submitRating()">Submit</button>
+       </div>
       </div>
+      
      </div>
     </div>
-   
+   <script src="/js/Rating.js"></script>
    <footer>
     <% include ../partials/footer %>
    </footer>
