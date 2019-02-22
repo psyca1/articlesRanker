@@ -10,13 +10,13 @@ const starsTotal = 5;
 
 const articleSelector = document.getElementById('articleSelect');
 const ratingSelector = document.getElementById('ratingSelect');
+const loadArticle = document.getElementById('loadArticleButton');
 
 let article;
 
 articleSelector.addEventListener('change', (e) => {
   product = e.target.value;
-  var x = document.getElementById("ratingSelect");
-  x.disabled=false;
+  ratingSelector.disabled=false;
   ratingSelector.value = ratings[article];
 });
 
@@ -30,6 +30,12 @@ ratingSelector.addEventListener('blur', (e) => {
 
   ratings[article] = rating; 
 });
+
+function disableButton(buttonAction){
+  if(buttonAction.id=='loadArticleButton'){
+     buttonAction.disabled=true;
+  }
+}
 
 function submitRating(){
 }
