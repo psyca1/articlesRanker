@@ -8,11 +8,12 @@ const ratings = {
 
 const starsTotal = 5;
 
+let article;
+
 const articleSelector = document.getElementById('articleSelect');
 const ratingSelector = document.getElementById('ratingSelect');
 const loadArticle = document.getElementById('loadArticleButton');
 
-let article;
 
 articleSelector.addEventListener('change', (e) => {
   product = e.target.value;
