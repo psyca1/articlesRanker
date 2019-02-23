@@ -1,27 +1,39 @@
+/*import React from "react"
+import ReactDOM from "react-dom"
 
-
-var page = 1;
-const pageCount = 5;
-
-window.onload = function(){
-  $.get("../articles/article-1.json").then(function(article1){
-    console.log(article1);
-    return $.get("../articles/article-2.json");
-  }).then(function(article2){
-    console.log(article2);
-    return $.get("../articles/article-3.json");
-  }).then(function(article3){
-    console.log(article3);
-    return $.get("../articles/article-4.json");
-  }).then(function(article4){
-    console.log(article4);
-    return $.get("../articles/article-5.json");
-  }).then(function(article5){
-    console.log(article5);
-  });
+class Article extends React.Component {
+  render(){
+    return(
+        <h1>Hello World</h1>
+        <button>Increment</button>
+    );
+  }
 }
 
+export default Article*/
 
-function displayArticle1() {
-  document.getElementById("showArticle").innerHTML = `Hello, ${1} article is being displayed.`;
+'use strict';
+
+const e = React.createElement;
+
+class Articles extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
+  render() {
+    if (this.state.liked) {
+      return 'You liked this.';
+    }
+
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
+    );
+  }
 }
+
+const domContainer = document.querySelector('#showArticle');
+ReactDOM.render(e(Articles), domContainer);
