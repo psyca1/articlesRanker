@@ -17,7 +17,7 @@ const loadArticleButton = document.getElementById('loadArticleButton');
 const previousButton = document.getElementById('previousButton');
 const nextButton = document.getElementById('nextButton');
 const submitButton = document.getElementById('submitButton');
-
+const articleSelect = document.getElementById('articleSelect');
 
 articleSelector.addEventListener('change', (e) => {
   product = e.target.value;
@@ -37,25 +37,49 @@ ratingSelector.addEventListener('blur', (e) => {
 });
 
 function disableButton(buttonAction){
-  if(buttonAction.id==loadArticleButton.id){
+  /*if(buttonAction.id==loadArticleButton.id){
     buttonAction.disabled=true;
-  } 
+  }*/ 
   if (buttonAction.id==submitButton.id){
   console.log(buttonAction);
     buttonAction.disabled=true;
     return;
   }
-  checkPageButton(2);
+  if (articleSelect.value==0){
+    changePageButton("article" + pageNumber);
+  } else {
+    changePageButton(articleSelect.value);
+  }
 }
 
-function checkPageButton(changePage) {
-  if(changePage==1){
-    pageNumber++;
-  } else if (changePage==0) {
-    pageNumber--;
-  } else {
-    console.log("Page number: \n" + pageNumber);
+function changePageButton(changePage) {
+  console.log(changePage);
+  switch(changePage){
+    case "previous":
+      pageNumber--;
+      articleSelect.value="article"+pageNumber;
+      break;
+    case "next":
+      pageNumber++;
+      articleSelect.value="article"+pageNumber;
+      break;
+    case "article1":
+      pageNumber=1;
+      break;
+    case "article2":
+      pageNumber=2;
+      break;
+    case "article3":
+      pageNumber=3;
+      break;
+    case "article4":
+      pageNumber=4;
+      break;
+    case "article5":
+      pageNumber=5;
+      break;
   }
+  
   submitButton.disabled=false;
   if (pageNumber==5){
     nextButton.disabled=true;
