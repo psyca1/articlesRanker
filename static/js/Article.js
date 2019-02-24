@@ -116,7 +116,33 @@ function displayArticle3(article3) {
 }
 
 function displayArticle4(article4) {
-  document.getElementById("showArticle").innerHTML = ``;
+  var parsedArticle4 = JSON.parse(article4);
+  document.getElementById("showArticle").innerHTML = `
+    <h1 class="article-title">${parsedArticle4.title}</h1><br>
+    <h2 class="article-header">${parsedArticle4.body[0].model.text}</h2><br>
+    <div class="row">
+      <div class="col-sm-6"
+        <p>${parsedArticle4.body[1].model.text}</p>
+        <hr>
+        <ul id="article1List">
+        ${parsedArticle4.body[2].model.items.map(function (listItem){
+        return "<li>" + listItem + "</li>"
+        }).join("<br>")}
+      </ul>
+      </div>
+      <div class="col-sm-6"
+        <p>${parsedArticle4.body[3].model.text}</p>
+        <hr>
+        <ul id="article1List">
+          ${parsedArticle4.body[4].model.items.map(function (listItem){
+          return "<li>" + listItem + "</li>"
+          }).join("<br>")}
+        </ul>
+        <hr>
+        <p>${parsedArticle4.body[5].model.text}</p>
+      </div>
+    </div>
+  `;
 }
 
 function displayArticle5(article5) {
