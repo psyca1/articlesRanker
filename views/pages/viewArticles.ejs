@@ -14,7 +14,7 @@
      <div class="row">
       
       <div class="col-sm-8 articleDisplay">
-        <div id="showArticle"></div>
+        <div id="showArticle"><div id="articleContainer"></div></div>
       </div>
       
       <div class="col-sm-4 ratingDisplay">
@@ -24,10 +24,10 @@
             <button type="button" class="btn btn-light" onclick="">Previous Article</button>
           </div>
           <div class="col col-4">
-            <button type="button" class="btn btn-light" id="loadArticleButton" onclick="displayArticle1(); return disableButton(this);" >Load Article</button>
+            <button type="button" class="btn btn-light" id="loadArticleButton" onclick="loadArticle1(); return disableButton(this);" >Load Article</button>
           </div>
           <div class="col col-4">
-            <button type="button" class="btn btn-light" onclick="">Next Article</button>
+            <button type="button" class="btn btn-light" onclick="displayArticle2();">Next Article</button>
           </div>
         </div>
         

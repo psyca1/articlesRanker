@@ -38,7 +38,7 @@ function disableButton(buttonAction){
   }
 }
 
-window.onload = function(){
+/*window.onload = function(){
   $.get("../articles/article-1.json").then(function(article1){
     console.log(article1);
     return $.get("../articles/article-2.json");
@@ -54,7 +54,7 @@ window.onload = function(){
   }).then(function(article5){
     console.log(article5);
   });
-}
+}*/
 
 
 function displayArticle1() {
