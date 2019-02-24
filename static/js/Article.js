@@ -34,7 +34,7 @@ function displayArticle1(article1){
     <h1 class="article-title">${parsedArticle1.title}</h1><br>
     <h2 class="article-header">${parsedArticle1.body[0].model.text}</h2><br>
     <div class="row">
-      <div class="col-sm-6"
+      <div class="col-sm-6">
         <p>${parsedArticle1.body[1].model.text}</p>
         <hr>
         <p>${parsedArticle1.body[3].model.text}</p>
@@ -43,7 +43,7 @@ function displayArticle1(article1){
       </div>
       <div class="col-sm-6">
         <img class="article-photo" src="${parsedArticle1.body[2].model.url}"> <hr>
-        <p><strong>${parsedArticle1.body[2].model.altText}</strong></p>
+        <p><strong>${parsedArticle1.body[2].model.altText}</strong></p><hr>
       </div>
     </div>
     <hr>
@@ -65,18 +65,18 @@ function displayArticle2(article2) {
     <div class="row">
       <div class="col-sm-6">
         <img class="article-photo" src="${parsedArticle2.body[1].model.url}"> <hr>
-        <p><strong>${parsedArticle2.body[1].model.altText}</strong></p>
+        <p><strong>${parsedArticle2.body[1].model.altText}</strong></p><hr>
         <p>${parsedArticle2.body[3].model.text}</p>
         <hr>
-        <<img class="article-photo" src="${parsedArticle2.body[6].model.url}"> <hr>
-        <p><strong>${parsedArticle2.body[6].model.altText}</strong></p>
+        <img class="article-photo" src="${parsedArticle2.body[6].model.url}"> <hr>
+        <p><strong>${parsedArticle2.body[6].model.altText}</strong></p><hr>
       </div>
       <div class="col-sm-6">
         <br>
         <p>${parsedArticle2.body[2].model.text}</p> <br> 
         <p>${parsedArticle2.body[5].model.text}</p> <br style="line-height:5;">
         <img class="article-photo" src="${parsedArticle2.body[4].model.url}"> <hr>
-        <p><strong>${parsedArticle2.body[4].model.altText}</strong></p>
+        <p><strong>${parsedArticle2.body[4].model.altText}</strong></p><hr>
         <p>${parsedArticle2.body[7].model.text}</p>
         
       </div>
@@ -93,7 +93,7 @@ function displayArticle3(article3) {
     <h1 class="article-title">${parsedArticle3.title}</h1><br>
     <h2 class="article-header">${parsedArticle3.body[0].model.text}</h2><br>
     <div class="row">
-      <div class="col-sm-6"
+      <div class="col-sm-6">
         <p>${parsedArticle3.body[1].model.text}</p>
         <hr>
         <p>${parsedArticle3.body[2].model.text}</p>
@@ -102,7 +102,7 @@ function displayArticle3(article3) {
         <hr>
         <p>${parsedArticle3.body[4].model.text}</p>
       </div>
-      <div class="col-sm-6"
+      <div class="col-sm-6">
         <p>${parsedArticle3.body[5].model.text}</p>
         <hr>
         <p>${parsedArticle3.body[6].model.text}</p>
@@ -121,7 +121,7 @@ function displayArticle4(article4) {
     <h1 class="article-title">${parsedArticle4.title}</h1><br>
     <h2 class="article-header">${parsedArticle4.body[0].model.text}</h2><br>
     <div class="row">
-      <div class="col-sm-6"
+      <div class="col-sm-6">
         <p>${parsedArticle4.body[1].model.text}</p>
         <hr>
         <ul id="article1List">
@@ -130,7 +130,7 @@ function displayArticle4(article4) {
         }).join("<br>")}
       </ul>
       </div>
-      <div class="col-sm-6"
+      <div class="col-sm-6">
         <p>${parsedArticle4.body[3].model.text}</p>
         <hr>
         <ul id="article1List">
@@ -146,5 +146,22 @@ function displayArticle4(article4) {
 }
 
 function displayArticle5(article5) {
-  document.getElementById("showArticle").innerHTML = ``;
+  var parsedArticle5 = JSON.parse(article5);
+  document.getElementById("showArticle").innerHTML = `
+    <h1 class="article-title">${parsedArticle5.title}</h1><br>
+    <h2 class="article-header">${parsedArticle5.body[0].model.text}</h2><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="article-photo" src="${parsedArticle5.body[1].model.url}"> <hr>
+        <p><strong>${parsedArticle5.body[1].model.altText}</strong></p><hr>
+      </div>
+      <div class="col-sm-4">
+        <p>${parsedArticle5.body[3].model.text}</p>
+      </div>
+      <div class="col-sm-4">
+        <img class="article-photo" src="${parsedArticle5.body[2].model.url}"> <hr>
+        <p><strong>${parsedArticle5.body[2].model.altText}</strong></p><hr>
+      </div>
+    </div>
+  `;
 }
