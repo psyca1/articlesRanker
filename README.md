@@ -6,6 +6,15 @@
 
 <hr>
 
+### Installation
+
+  - Clone repository.
+  - Run '<b>npm install</b>' on command line.
+  - Run '<b>node server/server.js</b>' on command line.
+  - Open the site in browser, through '<b>localhost:7000</b>'.
+
+<hr>
+
 ### File Tree
 
 <b> server </b>
