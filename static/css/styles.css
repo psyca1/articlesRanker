@@ -7,6 +7,10 @@
  padding: 20px;
 }
 
+body{
+  background-color: #EFF0F2 !important;
+}
+
 .articleDisplay {
  padding: 50px;
  min-width: 200px;

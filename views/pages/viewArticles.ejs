@@ -10,7 +10,7 @@
    <% include ../partials/navigation %>
    </header>
    
-    <div class="container-fluid">
+    <div class="container-fluid" id="mainPageContainer">
      <div class="row">
       
       <div class="col-sm-8 articleDisplay">
@@ -21,13 +21,13 @@
         
         <div class="row text-center">
           <div class="col col-4">
-            <button type="button" class="btn btn-light" onclick="">Previous Article</button>
+            <button type="button" class="btn btn-light" value="0" id="previousButton" onclick="return checkPageButton(this.value)">Previous Article</button>
           </div>
           <div class="col col-4">
-            <button type="button" class="btn btn-light" id="loadArticleButton" onclick="loadArticle1(); return disableButton(this);" >Load Article</button>
+            <button type="button" class="btn btn-light" id="loadArticleButton" onclick="return disableButton(this);" >Load Article</button>
           </div>
           <div class="col col-4">
-            <button type="button" class="btn btn-light" onclick="displayArticle2();">Next Article</button>
+            <button type="button" class="btn btn-light" id="nextButton" value="1" onclick="return checkPageButton(this.value);">Next Article</button>
           </div>
         </div>
         
