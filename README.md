@@ -20,7 +20,17 @@
 > partials
 >> Contains the files pertaining to the content loaded repeatedly in each page file. Instead of cluttering every single page by loading each site-wide element every time, the element is instead called from this folder whenever needed. 
 
+
+<b> static </b>
+> Contains the folders that hold the main JavaScript and CSS code, as well as the JSON files that will be used to load the articles. 
+
 > css
 >> Contains the file(s) pertaining to the styling of the page, specifically that which uses CSS. 
+
+> js
+>> Contains the file(s) pertaining to the handling of the UI logic, as well as the loading of the JSON files into a nice template.
+
+> articles
+>> Contains the file(s) that holds the data for each article in a JSON format.
 
 <hr>
