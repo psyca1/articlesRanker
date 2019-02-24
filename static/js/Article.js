@@ -1,12 +1,31 @@
 function loadArticle() {
   $.get("../articles/article-" + pageNumber + ".json").then(function(article){
-    var obj = JSON.stringify(article1);
-    displayArticle1(obj);
-    console.log(obj);
-    return $.get("../articles/article-2.json");
-  }).then(function(article2){
-    console.log(article2);
+    var obj = JSON.stringify(article);
+    switch (pageNumber){
+    case 1:
+      displayArticle1(obj);
+      break;
+    case 2:
+      displayArticle2(obj);
+      break;
+    case 3:
+      displayArticle3(obj);
+      break;
+    case 4:
+      displayArticle4(obj);
+      break;
+    case 5:
+      displayArticle5(obj);
+      break;
+  }
   });
+  
+  if (pageNumber!=5){
+    $.get("../articles/article-" + (pageNumber + 1) + ".json").then(function(article){
+    var obj1 = JSON.stringify(article);
+    console.log("Next Article Data: \n" + obj1);
+  });
+  }
 }
 
 function displayArticle1(article1){

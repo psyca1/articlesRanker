@@ -42,31 +42,13 @@ function disableButton(buttonAction){
   checkPageButton(2);
 }
 
-/*function nextPageButton() {
-  pageNumber++;
-  if (pageNumber!=5){
-    nextButton.disabled=false;
-  } else {
-    nextButton.disabled=true;
-  }
-}
-
-function previousPageButton() {
-  pageNumber--;
-  if (pageNumber!=1){
-    previousButton.disabled=false;
-  } else {
-    previousButton.disabled=true;
-  }
-}*/
-
 function checkPageButton(changePage) {
   if(changePage==1){
     pageNumber++;
   } else if (changePage==0) {
     pageNumber--;
   } else {
-    console.log(pageNumber);
+    console.log("Page number: \n" + pageNumber);
   }
   
   if (pageNumber==5){
