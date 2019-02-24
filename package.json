@@ -1,0 +1,31 @@
+{
+  "name": "articlesRanker",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": "### Overview",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "css": "^2.2.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "node": "^11.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psyca1/articlesRanker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psyca1/articlesRanker/issues"
+  },
+  "homepage": "https://github.com/psyca1/articlesRanker#readme"
+}
