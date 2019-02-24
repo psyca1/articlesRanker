@@ -9,17 +9,58 @@
    <header>
    <% include ../partials/navigation %>
    </header>
-   
     <div class="container-fluid">
      <div class="row">
       <div class="col-sm-2" name="buffer"></div>
       <div class="col-sm-8 rankedDisplay">
-       <canvas id="rankedFrame"></canvas>
+       <table class="table table-light table-striped">
+         <thead class="thead-dark">
+           <tr>
+             <th>Articles</th>
+             <th>Your Rating</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr class="article1">
+             <td>Article 1</td>
+             <td>
+               <div class="stars"></div>
+             </td>
+           </tr>
+           <tr class="article2">
+             <td>Article 2</td>
+             <td>
+               <div class="stars"></div>
+             </td>
+           </tr>
+           <tr class="article3">
+             <td>Article 3</td>
+             <td>
+               <div class="stars"></div>
+             </td>
+           </tr>
+           <tr class="article4">
+             <td>Article 4</td>
+             <td>
+               <div class="stars"></div>
+             </td>
+           </tr>
+           <tr class="article5">
+             <td>Article 5</td>
+             <td>
+               <div class="stars"></div>
+             </td>
+           </tr>
+          </tbody>
+        </table>
       </div>
       <div class="col-sm-2" name="buffer"></div>
      </div>
     </div>
-   
+   <script type="text/javascript" src="/js/Rating.js"></script>
+   <script>
+     document.addEventListener('DOMContentLoaded', submitRating);
+   </script>
    <footer>
     <% include ../partials/footer %>
    </footer>

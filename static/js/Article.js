@@ -23,7 +23,6 @@ function loadArticle() {
   if (pageNumber!=5){
     $.get("../articles/article-" + (pageNumber + 1) + ".json").then(function(article){
     var obj1 = JSON.stringify(article);
-    console.log("Next Article Data: \n" + obj1);
   });
   }
 }
