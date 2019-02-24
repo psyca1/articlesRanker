@@ -47,7 +47,7 @@
            <input type="number" id="ratingSelect" class="form-control" step="0.1" max="5" placeholder="Rate the Article from 1-5:" disabled>
          </div>
          <div class="col text-center">
-           <button type="button" class="btn btn-light" onsubmit="submitRating(); return disableButton(this);">Submit</button>
+           <button type="button" class="btn btn-light" id="submitButton" onclick="submitRating(); return disableButton(this);">Submit</button>
          </div>
        </div>
       </div>

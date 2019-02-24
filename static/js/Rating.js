@@ -16,6 +16,7 @@ const ratingSelector = document.getElementById('ratingSelect');
 const loadArticleButton = document.getElementById('loadArticleButton');
 const previousButton = document.getElementById('previousButton');
 const nextButton = document.getElementById('nextButton');
+const submitButton = document.getElementById('submitButton');
 
 
 articleSelector.addEventListener('change', (e) => {
@@ -36,8 +37,13 @@ ratingSelector.addEventListener('blur', (e) => {
 });
 
 function disableButton(buttonAction){
-  if(buttonAction.id==loadArticleButton){
-     buttonAction.disabled=true;
+  if(buttonAction.id==loadArticleButton.id){
+    buttonAction.disabled=true;
+  } 
+  if (buttonAction.id==submitButton.id){
+  console.log(buttonAction);
+    buttonAction.disabled=true;
+    return;
   }
   checkPageButton(2);
 }
@@ -50,7 +56,7 @@ function checkPageButton(changePage) {
   } else {
     console.log("Page number: \n" + pageNumber);
   }
-  
+  submitButton.disabled=false;
   if (pageNumber==5){
     nextButton.disabled=true;
     previousButton.disabled=false;
