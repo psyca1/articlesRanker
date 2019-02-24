@@ -43,3 +43,13 @@
 >> Contains the file(s) that holds the data for each article in a JSON format.
 
 <hr>
+
+### Conclusions
+
+Overall, this project was very satisfying to complete. There have been several instances of decision-making that has allowed me to try out new packages and frameworks, and force me to stretch the scope of my knowledge, beyond that which I already knew. Coming into the project, I was confident I had a strong basis for completing it, but multiple doors were opened to me, and I soon found myself experimenting with new things that, although may be slightly more convoluted, provided an elegant solution that fulfilled the brief.
+
+I have added new features that were not required, such as loading any specific article from any location (as opposed to a simple 'next' button) and a multi-page layout that, given some more time, would allow the user to see all their ratings for each puzzle.
+
+Unfortunately, I wasn't able to get around to displaying the user's ratings on this page, but I did create the table layout to give an idea of how the final version might look. I intended to use jQuery to simply connect the pages and display the relevant information.
+
+<hr>
