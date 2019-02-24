@@ -27,7 +27,7 @@ function checkRatingSelection() {
   const rating = parseFloat(ratingSelect.value);
   const currentArticle = articleSelect.value;
 
-  if (rating<0 || rating>10) {
+  if (rating<0 || rating>10 || isNaN(rating)) {
     alert('Please provide a valid rating between 1-10.');
     return;
   }
