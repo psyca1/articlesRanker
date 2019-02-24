@@ -1,9 +1,9 @@
 const ratings = {
-  article1: 4.7,
-  article2: 3.4,
-  article3: 2.3,
-  article4: 3.6,
-  article5: 4.1
+  article1: 0.0,
+  article2: 0.0,
+  article3: 0.0,
+  article4: 0.0,
+  article5: 0.0
 }
 
 const starsTotal = 5;
@@ -20,8 +20,9 @@ const submitButton = document.getElementById('submitButton');
 const articleSelect = document.getElementById('articleSelect');
 
 articleSelector.addEventListener('change', (e) => {
-  product = e.target.value;
-  ratingSelector.disabled=false;
+  article = e.target.value;
+  console.log(article);
+  ratingSelector.disabled = false;
   ratingSelector.value = ratings[article];
 });
 
@@ -41,11 +42,12 @@ function disableButton(buttonAction){
     buttonAction.disabled=true;
   }*/ 
   if (buttonAction.id==submitButton.id){
-  console.log(buttonAction);
     buttonAction.disabled=true;
     return;
   }
   if (articleSelect.value==0){
+    articleSelect.value="article1";
+    ratingSelect.disabled=false;
     changePageButton("article" + pageNumber);
   } else {
     changePageButton(articleSelect.value);
@@ -53,7 +55,6 @@ function disableButton(buttonAction){
 }
 
 function changePageButton(changePage) {
-  console.log(changePage);
   switch(changePage){
     case "previous":
       pageNumber--;
@@ -95,5 +96,13 @@ function changePageButton(changePage) {
   loadArticle();
 }
 
-function submitRating(){
+function getRatings(){
+  console.log(ratings);
+  for(let rating in ratings){
+    console.log(ratings[rating]);
+  }
+}
+
+function submitRating() {
+  getRatings();
 }
