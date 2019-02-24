@@ -6,41 +6,37 @@ const ratings = {
   article5: 0.0
 }
 
-const starsTotal = 5;
-
 let article;
 var pageNumber = 1;
 
-const articleSelector = document.getElementById('articleSelect');
-const ratingSelector = document.getElementById('ratingSelect');
+const articleSelect = document.getElementById('articleSelect');
+const ratingSelect = document.getElementById('ratingSelect');
 const loadArticleButton = document.getElementById('loadArticleButton');
 const previousButton = document.getElementById('previousButton');
 const nextButton = document.getElementById('nextButton');
 const submitButton = document.getElementById('submitButton');
-const articleSelect = document.getElementById('articleSelect');
 
-articleSelector.addEventListener('change', (e) => {
-  article = e.target.value;
-  console.log(article);
-  ratingSelector.disabled = false;
-  ratingSelector.value = ratings[article];
-});
+function checkArticleSelection() {
+  article = articleSelect.value;
+  ratingSelect.disabled = false;
+  ratingSelect.value = ratings[article];
+}
 
-ratingSelector.addEventListener('blur', (e) => {
-  const rating = e.target.value;
+function checkRatingSelection() {
+  
+  const rating = parseFloat(ratingSelect.value);
+  const currentArticle = articleSelect.value;
 
-  if (rating > 5) {
-    alert('Please provide a valid rating between 1-5.');
+  if (rating<0 || rating>10) {
+    alert('Please provide a valid rating between 1-10.');
     return;
   }
-
-  ratings[article] = rating; 
-});
+  ratings[currentArticle] = rating; 
+  console.log(ratings);
+  disableButton(submitButton);
+}
 
 function disableButton(buttonAction){
-  /*if(buttonAction.id==loadArticleButton.id){
-    buttonAction.disabled=true;
-  }*/ 
   if (buttonAction.id==submitButton.id){
     buttonAction.disabled=true;
     return;
@@ -55,14 +51,17 @@ function disableButton(buttonAction){
 }
 
 function changePageButton(changePage) {
+  console.log(changePage);
   switch(changePage){
     case "previous":
       pageNumber--;
       articleSelect.value="article"+pageNumber;
+      ratingSelect.value=ratings[pageNumber-1];
       break;
     case "next":
       pageNumber++;
       articleSelect.value="article"+pageNumber;
+      ratingSelect.value=ratings[pageNumber-1];
       break;
     case "article1":
       pageNumber=1;
@@ -92,17 +91,11 @@ function changePageButton(changePage) {
     nextButton.disabled=false;
     previousButton.disabled=false;
   }
-  
+  console.log(pageNumber)
   loadArticle();
 }
 
-function getRatings(){
-  console.log(ratings);
-  for(let rating in ratings){
-    console.log(ratings[rating]);
-  }
-}
-
 function submitRating() {
-  getRatings();
-}
+  //To-do: display ratings so that the user can see all of their ratings for each article.
+  
+  }

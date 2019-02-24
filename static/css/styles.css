@@ -7,6 +7,11 @@
   padding: 20px;
 }
 
+.welcomeHeader {
+  margin-top: 20px;
+  text-align: center;
+}
+
 body{
   background-color: #EFF0F2 !important;
 }
