@@ -29,7 +29,6 @@ app.get(`/rankedArticles/`, function(req,res){
  console.log(`Rendering Ranked Page`);
 });
 
-
 //Display on the console what port the server is running on.
 const server = app.listen(7000, ()=> {
  console.log(`Server successfully running on Port: ${server.address().port}`);

@@ -1,3 +1,5 @@
+
+//function to load each article, as well the succeeding article. The relevant article will then be displayed for the user to rank.
 function loadArticle() {
   $.get("../articles/article-" + pageNumber + ".json").then(function(article){
     var obj = JSON.stringify(article);
@@ -27,6 +29,7 @@ function loadArticle() {
   }
 }
 
+//function to display the first article.
 function displayArticle1(article1){
   var parsedArticle1 = JSON.parse(article1);
   document.getElementById("showArticle").innerHTML = `
@@ -56,6 +59,7 @@ function displayArticle1(article1){
   `;
 }
 
+//function to display the second article.
 function displayArticle2(article2) {
   var parsedArticle2 = JSON.parse(article2);
   document.getElementById("showArticle").innerHTML = `
@@ -86,6 +90,7 @@ function displayArticle2(article2) {
   `;
 }
 
+//function to display the third article.
 function displayArticle3(article3) {
   var parsedArticle3 = JSON.parse(article3);
   document.getElementById("showArticle").innerHTML = `
@@ -114,6 +119,7 @@ function displayArticle3(article3) {
   `;
 }
 
+//function to display the fourth article.
 function displayArticle4(article4) {
   var parsedArticle4 = JSON.parse(article4);
   document.getElementById("showArticle").innerHTML = `
@@ -144,6 +150,7 @@ function displayArticle4(article4) {
   `;
 }
 
+//function to display the fifth article.
 function displayArticle5(article5) {
   var parsedArticle5 = JSON.parse(article5);
   document.getElementById("showArticle").innerHTML = `
