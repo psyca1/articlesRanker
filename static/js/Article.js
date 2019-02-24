@@ -29,15 +29,30 @@ function loadArticle() {
 }
 
 function displayArticle1(article1){
-  var article1 = JSON.parse(article1);
+  var parsedArticle1 = JSON.parse(article1);
   document.getElementById("showArticle").innerHTML = `
-    <h1 class="app-title">${article1.title}</h1>
-    ${article1.body.map(function(article){
-      return `
-        <div class="article">
-        </div>
-      `
-  })}
+    <h1 class="article-title">${parsedArticle1.title}</h1><br>
+    <h2 class="article-header">${parsedArticle1.body[0].model.text}</h2><br>
+    <div class="row">
+    <div class="col-sm-6"
+      <p>${parsedArticle1.body[1].model.text}</p>
+      <hr>
+      <p>${parsedArticle1.body[3].model.text}</p>
+      <hr>
+      <p>${parsedArticle1.body[4].model.text}</p>
+    </div>
+    <div class="col-sm-6">
+      <img class="article-photo" src="${parsedArticle1.body[2].model.url}"> <hr>
+      <p><strong>${parsedArticle1.body[2].model.altText}</strong></p>
+    </div>
+    </div>
+    <hr>
+    <div class="row">
+    <ul id="article1List">
+      ${parsedArticle1.body[5].model.items.map(function (listItem){
+      return "<li>" + listItem + "</li>"
+      }).join("<br>")}
+    </ul>
   `;
 }
 
@@ -55,20 +70,4 @@ function displayArticle4() {
 
 function displayArticle5() {
   document.getElementById("showArticle").innerHTML = ``;
-}
-
-function displayHeading(header) {
-  
-}
-
-function displayParagraph(paragraph) {
-  
-}
-
-function displayImage(image) {
-  
-}
-
-function displayList(list) {
-  
 }
